@@ -27,7 +27,7 @@ namespace Microsoft.Build.Tasks.Deployment.Bootstrapper
         }
 
         /// <summary>
-        /// Returns all products available at the current bootstrapper Path
+        /// Returns all products available at the current bootstrapper Path.
         /// </summary>
         [DispId(4)]
         ProductCollection Products
@@ -54,7 +54,7 @@ namespace Microsoft.Build.Tasks.Deployment.Bootstrapper
     public interface IBuildSettings
     {
         /// <summary>
-        /// The name of the application to be installed after the bootstrapper has installed all required components.  If no application is to be installed, this parameter may be null
+        /// The name of the application to be installed after the bootstrapper has installed all required components.  If no application is to be installed, this parameter may be null.
         /// </summary>
         [DispId(1)]
         string ApplicationName
@@ -64,7 +64,7 @@ namespace Microsoft.Build.Tasks.Deployment.Bootstrapper
         }
 
         /// <summary>
-        /// The file to be installed after the bootstrapper has installed the required components.  It is assumed that this file path is relative to the bootstrapper source path.  If no application is to be installed, this parameter may be null
+        /// The file to be installed after the bootstrapper has installed the required components.  It is assumed that this file path is relative to the bootstrapper source path.  If no application is to be installed, this parameter may be null.
         /// </summary>
         [DispId(2)]
         string ApplicationFile
@@ -74,7 +74,7 @@ namespace Microsoft.Build.Tasks.Deployment.Bootstrapper
         }
 
         /// <summary>
-        /// The expected source location if the bootstrapper is published to a website.  It is expected that the ApplicationFile, if specified, will be published to the location consistent to this value. If ComponentsLocation is Relative, required component files will also be published in a manner consistent with this value.  This value may be null if setup.exe is not to be published to the web
+        /// The expected source location if the bootstrapper is published to a website. It is expected that the ApplicationFile, if specified, will be published to the location consistent to this value. If ComponentsLocation is Relative, required component files will also be published in a manner consistent with this value. This value may be null if setup.exe is not to be published to the web.
         /// </summary>
         [DispId(3)]
         string ApplicationUrl
@@ -84,7 +84,7 @@ namespace Microsoft.Build.Tasks.Deployment.Bootstrapper
         }
 
         /// <summary>
-        /// The location the bootstrapper install time will use for components if ComponentsLocation is "Absolute"
+        /// The location the bootstrapper install time will use for components if ComponentsLocation is "Absolute".
         /// </summary>
         [DispId(4)]
         string ComponentsUrl
@@ -94,7 +94,7 @@ namespace Microsoft.Build.Tasks.Deployment.Bootstrapper
         }
 
         /// <summary>
-        /// If true, the bootstrapper components will be copied to the build output directory.  If false, the files will not be copied
+        /// If true, the bootstrapper components will be copied to the build output directory. If false, the files will not be copied.
         /// </summary>
         [DispId(5)]
         bool CopyComponents
@@ -104,7 +104,7 @@ namespace Microsoft.Build.Tasks.Deployment.Bootstrapper
         }
 
         /// <summary>
-        /// The culture identifier for the bootstrapper to be built
+        /// The culture identifier for the bootstrapper to be built.
         /// </summary>
         [DispId(6)]
         int LCID
@@ -114,7 +114,7 @@ namespace Microsoft.Build.Tasks.Deployment.Bootstrapper
         }
 
         /// <summary>
-        /// The culture identifier to use if the LCID identifier is not available
+        /// The culture identifier to use if the LCID identifier is not available.
         /// </summary>
         [DispId(7)]
         int FallbackLCID
@@ -124,7 +124,7 @@ namespace Microsoft.Build.Tasks.Deployment.Bootstrapper
         }
 
         /// <summary>
-        /// The file location to copy output files to
+        /// The file location to copy output files to.
         /// </summary>
         [DispId(8)]
         string OutputPath
@@ -134,7 +134,7 @@ namespace Microsoft.Build.Tasks.Deployment.Bootstrapper
         }
 
         /// <summary>
-        /// The product builders to use for generating the bootstrapper
+        /// The product builders to use for generating the bootstrapper.
         /// </summary>
         [DispId(9)]
         ProductBuilderCollection ProductBuilders
@@ -143,7 +143,7 @@ namespace Microsoft.Build.Tasks.Deployment.Bootstrapper
         }
 
         /// <summary>
-        /// True if the bootstrapper will perform XML validation on the component manifests
+        /// True if the bootstrapper will perform XML validation on the component manifests.
         /// </summary>
         [DispId(10)]
         bool Validate
@@ -153,7 +153,7 @@ namespace Microsoft.Build.Tasks.Deployment.Bootstrapper
         }
 
         /// <summary>
-        /// Specifies the install time location for bootstrapper components
+        /// Specifies the install time location for bootstrapper components.
         /// </summary>
         [DispId(11)]
         ComponentsLocation ComponentsLocation
@@ -163,7 +163,7 @@ namespace Microsoft.Build.Tasks.Deployment.Bootstrapper
         }
 
         /// <summary>
-        /// Specifies a URL for the Web site containing support information for the bootstrapper
+        /// Specifies a URL for the Web site containing support information for the bootstrapper.
         /// </summary>
         [DispId(12)]
         string SupportUrl
@@ -195,7 +195,7 @@ namespace Microsoft.Build.Tasks.Deployment.Bootstrapper
     public interface IProduct
     {
         /// <summary>
-        /// The ProductBuilder representation of this Product
+        /// The ProductBuilder representation of this Product.
         /// </summary>
         [DispId(1)]
         ProductBuilder ProductBuilder
@@ -204,7 +204,7 @@ namespace Microsoft.Build.Tasks.Deployment.Bootstrapper
         }
 
         /// <summary>
-        /// A human-readable name for this product
+        /// A human-readable name for this product.
         /// </summary>
         [DispId(2)]
         string Name
@@ -213,7 +213,7 @@ namespace Microsoft.Build.Tasks.Deployment.Bootstrapper
         }
 
         /// <summary>
-        /// A string specifying the unique identifier of this product
+        /// A string specifying the unique identifier of this product.
         /// </summary>
         [DispId(3)]
         string ProductCode
@@ -222,7 +222,7 @@ namespace Microsoft.Build.Tasks.Deployment.Bootstrapper
         }
 
         /// <summary>
-        /// All products which this product also installs
+        /// All products which this product also installs.
         /// </summary>
         [DispId(4)]
         ProductCollection Includes
@@ -240,7 +240,7 @@ namespace Microsoft.Build.Tasks.Deployment.Bootstrapper
     public interface IProductCollection
     {
         /// <summary>
-        /// Gets the number of elements actually contained in the ProductCollection
+        /// Gets the number of elements actually contained in the ProductCollection.
         /// </summary>
         [DispId(1)]
         int Count
@@ -251,16 +251,16 @@ namespace Microsoft.Build.Tasks.Deployment.Bootstrapper
         /// <summary>
         /// Gets the Product at the specified index.
         /// </summary>
-        /// <param name="index">The zero-based index of the element to get</param>
-        /// <returns>The Product at the specified index</returns>
+        /// <param name="index">The zero-based index of the element to get.</param>
+        /// <returns>The Product at the specified index.</returns>
         [DispId(2)]
         Product Item(int index);
 
         /// <summary>
-        /// Gets the product with the specified product code
+        /// Gets the product with the specified product code.
         /// </summary>
         /// <param name="productCode"></param>
-        /// <returns>The product with the given name, null if the spercified product code is not found</returns>
+        /// <returns>The product with the given name, null if the spercified product code is not found.</returns>
         [DispId(3)]
         Product Product(string productCode);
     }
@@ -274,7 +274,7 @@ namespace Microsoft.Build.Tasks.Deployment.Bootstrapper
     public interface IProductBuilder
     {
         /// <summary>
-        /// The product corresponding to this builder
+        /// The product corresponding to this builder.
         /// </summary>
         [DispId(1)]
         Product Product
@@ -292,9 +292,9 @@ namespace Microsoft.Build.Tasks.Deployment.Bootstrapper
     public interface IProductBuilderCollection
     {
         /// <summary>
-        /// Adds a builder to the collection
+        /// Adds a builder to the collection.
         /// </summary>
-        /// <param name="builder">The ProductBuilder to add to the collection</param>
+        /// <param name="builder">The ProductBuilder to add to the collection.</param>
         [DispId(2)]
         void Add(ProductBuilder builder);
     }
@@ -308,7 +308,7 @@ namespace Microsoft.Build.Tasks.Deployment.Bootstrapper
     public interface IBuildResults
     {
         /// <summary>
-        /// Returns true if the bootstrapper build was successful, false otherwise
+        /// Returns true if the bootstrapper build was successful, false otherwise.
         /// </summary>
         [DispId(1)]
         bool Succeeded
@@ -317,7 +317,7 @@ namespace Microsoft.Build.Tasks.Deployment.Bootstrapper
         }
 
         /// <summary>
-        /// The file path to the generated primary bootstrapper file
+        /// The file path to the generated primary bootstrapper file.
         /// </summary>
         /// <value>Path to setup.exe</value>
         [DispId(2)]
@@ -327,9 +327,9 @@ namespace Microsoft.Build.Tasks.Deployment.Bootstrapper
         }
 
         /// <summary>
-        /// File paths to copied component installer files
+        /// File paths to copied component installer files.
         /// </summary>
-        /// <value>Path to component files</value>
+        /// <value>Path to component files.</value>
         [DispId(3)]
         string[] ComponentFiles
         {
@@ -337,7 +337,7 @@ namespace Microsoft.Build.Tasks.Deployment.Bootstrapper
         }
 
         /// <summary>
-        /// The build messages generated from a bootstrapper build
+        /// The build messages generated from a bootstrapper build.
         /// </summary>
         [DispId(4)]
         BuildMessage[] Messages
@@ -355,7 +355,7 @@ namespace Microsoft.Build.Tasks.Deployment.Bootstrapper
     public interface IBuildMessage
     {
         /// <summary>
-        /// This severity of this build message
+        /// This severity of this build message.
         /// </summary>
         [DispId(1)]
         BuildMessageSeverity Severity
@@ -364,7 +364,7 @@ namespace Microsoft.Build.Tasks.Deployment.Bootstrapper
         }
 
         /// <summary>
-        /// A text string describing the details of the build message
+        /// A text string describing the details of the build message.
         /// </summary>
         [DispId(2)]
         string Message
@@ -373,7 +373,7 @@ namespace Microsoft.Build.Tasks.Deployment.Bootstrapper
         }
 
         /// <summary>
-        /// The MSBuild F1-help keyword for the host IDE, or null
+        /// The MSBuild F1-help keyword for the host IDE, or null.
         /// </summary>
         [DispId(3)]
         string HelpKeyword
@@ -382,7 +382,7 @@ namespace Microsoft.Build.Tasks.Deployment.Bootstrapper
         }
 
         /// <summary>
-        /// The MSBuild help id for the host IDE
+        /// The MSBuild help id for the host IDE.
         /// </summary>
         [DispId(4)]
         int HelpId
@@ -399,36 +399,36 @@ namespace Microsoft.Build.Tasks.Deployment.Bootstrapper
     public enum BuildMessageSeverity
     {
         /// <summary>
-        /// Indicates that the message corresponds to build information
+        /// Indicates that the message corresponds to build information.
         /// </summary>
         Info,
         /// <summary>
-        /// Indicates that the message corresponds to a build warning
+        /// Indicates that the message corresponds to a build warning.
         /// </summary>
         Warning,
         /// <summary>
-        /// Indicates that the message corresponds to a build error
+        /// Indicates that the message corresponds to a build error.
         /// </summary>
         Error
     };
 
     /// <summary>
-    /// This enumeration describes the way required components will be published
+    /// This enumeration describes the way required components will be published.
     /// </summary>
     [ComVisible(true)]
     [Guid("12F49949-7B60-49CD-B6A0-2B5E4A638AAF")]
     public enum ComponentsLocation
     {
         /// <summary>
-        /// Products will be found according to the redist vendor's designated URL 
+        /// Products will be found according to the redist vendor's designated URL.
         /// </summary>
         HomeSite,
         /// <summary>
-        /// Products will be located relative to generated bootstrapper
+        /// Products will be located relative to generated bootstrapper.
         /// </summary>
         Relative,
         /// <summary>
-        /// All products will be located at s specific location
+        /// All products will be located at s specific location.
         /// </summary>
         Absolute
     };
